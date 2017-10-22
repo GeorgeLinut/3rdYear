@@ -1,0 +1,12 @@
+class main {
+        public static void main ( String []  args ) {
+            int r , area , circumference ;
+            double pi ;
+            pi = 3.14 ;
+            read ( r ) ;
+            area = pi * r * r ;
+            circumference = 2 * pi * r ;
+            print ( area ) ;
+            print ( circumference ) ;
+            }
+         }

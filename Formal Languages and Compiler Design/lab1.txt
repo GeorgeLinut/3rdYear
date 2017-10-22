@@ -1,0 +1,92 @@
+<program> ::= "class" <mainClassName> "{" <mainFunction> "}"
+<mainClassName> ::= <word>
+<mainFunction> ::= "public" "static" "void" "main" "(" "String[]" "args" ")" "{" <statementList> "}"
+<statementList> ::= <statement> | <statement> <statementList> 
+<listOfAttributes> ::= <attribute>";" | <attribute>";" <listOfAttributes>
+<attribute> ::= <accesModifier> <type> <word> 
+<type> ::= <simpleType>|<userDefinedType>
+<simpleType> ::= "int"|"double"
+<userDefinedType> ::= "Vector<" <simpleType> ">"
+<accesModifier> ::= "private"|"public"
+<listOfVariables> ::= <variableID>"," <listOfVariables>
+<variableID> ::= <word>|<word>[<value>]
+<word> ::= <letter><word>
+<letter> ::= "a"|"b"|...|"X"|"Z"
+
+<statement> ::= <assignmentStmt>|<variableDeclarationStmt>|<inputStmt>|<outputStmt>| <conditionalStmt>|<loopStmt>
+<assignmentStmt> ::= <variableID> "=" <expr> ";"
+<variableDeclarationStmt> ::= <type> <listOfVariables> ";"
+<outputStmt> ::= "print" "("<expr> ")"  ";"
+<inputStmt> ::= "read" "("<variableID>")" ";"
+<conditionalStmt> ::= "if" "("<boolExpr>")" "{"<statementList>"}" "else" "{"<statementList>"}"
+<loopStmt> ::= "while" "("<boolExpr>")" "{"<statementList>"}"
+
+<expr> ::= <expr><operator><expr>
+<operator> ::= "+"|"*"|"/"|"-" 
+<expr> ::= <number>|<variableID>
+<value> ::= <number>|<number>[.<number>]
+<number> ::= <zero>|<nonZero><digits>
+<nonZero> ::= "1"|"2"|...|"9"
+<zero> ::= "0"
+<digit> ::= <zero>|<nonZero>
+<digits> ::= <digit>|<digit><digits>
+<boolExpr> ::= <expr> <boolOperator> <expr>
+<boolOperator> ::= "!="|"=="|">"|"<"|">="|"<="
+
+
+Program #1:
+	class Main{
+		public static void main(String[] args){
+			int r, area, circumference;
+			double pi;
+			pi=3.14;
+			read(r);
+			area = pi*r*r;
+			circumference = 2*pi*r;
+			print(area);
+			print(circumference);
+		}
+	}
+
+
+Program #2:
+	class Main{
+		public static void main(String[] args){
+			int a, b;
+			read(a);
+			read(b);
+			if(a != 0){
+				if(b != 0){
+					while(a != b){
+						if(a>b)
+							{ a=a-b; }
+						else
+							{ b=b-a; }
+						}
+					print(a);
+				}
+				else{
+					print(a);
+				}
+			}
+			else{
+				print(b);
+			}	
+		}
+	}
+
+
+Program #3:
+	class Main{
+		public static void main(String[] args){
+			int n, sum, var;
+			read(n);
+			sum=0;
+			while(n > 0){
+				read(var);
+				sum=sum+var;
+				n=n-1;	
+			}
+			print(sum);
+		}
+	}
