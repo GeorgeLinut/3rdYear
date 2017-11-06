@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 /**
  * Created by glinut on 10/22/2017.
+ * The class that allows executing a set of operations in parallel this way from our initial list of
+ * operations we execute from a start index to a stop index given bu the user
  */
 public class ChangeBalanceThread implements Runnable {
     private ArrayList<Operation> operations;
@@ -14,6 +16,7 @@ public class ChangeBalanceThread implements Runnable {
         this.iStart = iStart;
         this.iStop = iStop;
     }
+
 
     @Override
     public void run() {

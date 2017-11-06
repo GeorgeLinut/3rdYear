@@ -1,16 +1,16 @@
 <program> ::= "class" <mainClassName> "{" <mainFunction> "}"
-<mainClassName> ::= <word>
+<mainClassName> ::= <entry>
 <mainFunction> ::= "public" "static" "void" "main" "(" "String[]" "args" ")" "{" <statementList> "}"
 <statementList> ::= <statement> | <statement> <statementList> 
 <listOfAttributes> ::= <attribute>";" | <attribute>";" <listOfAttributes>
-<attribute> ::= <accesModifier> <type> <word> 
+<attribute> ::= <accesModifier> <type> <entry>
 <type> ::= <simpleType>|<userDefinedType>
 <simpleType> ::= "int"|"double"
 <userDefinedType> ::= "Vector<" <simpleType> ">"
 <accesModifier> ::= "private"|"public"
 <listOfVariables> ::= <variableID>"," <listOfVariables>
-<variableID> ::= <word>|<word>[<value>]
-<word> ::= <letter><word>
+<variableID> ::= <entry>|<entry>[<value>]
+<entry> ::= <letter><entry>
 <letter> ::= "a"|"b"|...|"X"|"Z"
 
 <statement> ::= <assignmentStmt>|<variableDeclarationStmt>|<inputStmt>|<outputStmt>| <conditionalStmt>|<loopStmt>
@@ -90,3 +90,17 @@ Program #3:
 			print(sum);
 		}
 	}
+
+Scanner documentation:
+    At each line we split the row using as separator the spaces.
+        For each element we search if we found it in the atom table.
+            If the element is in the atom table then we insert an entry in the pif with the code and 0
+            Else If the element is not in the atom table
+                We perform the lexical check if the length is less then 255 and we don't have any characters that are
+                not in the lexic.
+                    If the element passes the test we search for it in the symbol table
+                        If the element is already in the symbol table we insert an entry in the pif with 0 and the
+                        number in the symbol table
+                        Else the element is not in the symbol table we increment our index and put an entry with 0 and
+                        that index in the program internal form
+                    Else we report an error at that line
