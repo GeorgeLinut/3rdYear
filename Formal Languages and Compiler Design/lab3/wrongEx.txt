@@ -1,0 +1,12 @@
+class wrongClass{
+		public static void main(string[] args){
+			int r, area, circumferencecircumferencecircumferencecircumferencecircumferencecircumferencecircumferencecircumferencecircumferencecircumferencecircumferencecircumferencecircumferencecircumferencecircumferencecircumferencecircumferencecircumferencecircumferencecircumferencecircumferencecircumferencecircumferencecircumferencecircumferencecircumferencecircumferencecircumferencecircumferencecircumferencecircumferencecircumferencecircumferencecircumferencecircumferencecircumferencecircumferencecircumferencecircumferencecircumference;
+			double pi;
+			pi=3.14;$$
+			read(r);
+			area = pi*r*r;
+			circumference = 2*pi*r;
+			print(area);
+			print(circumference);
+		}
+	}

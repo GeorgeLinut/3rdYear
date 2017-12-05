@@ -1,0 +1,12 @@
+	{
+			int n, sum, var;
+			read(n);
+			sum=0;
+			while(n > 0){
+				read(var);
+				sum=sum+var;
+				n=n-1;	
+			}
+			print(sum);
+		}
+	}

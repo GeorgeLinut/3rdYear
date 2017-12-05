@@ -1,0 +1,5 @@
+<ul>
+  <li *ngFor="let businessPartner of BusinessPartnerList">
+    <app-business-partner-item (businessPartnerClicked)="onItemClicked($event)" )[businessPartner]="businessPartner"></app-business-partner-item>
+  </li>
+</ul>
