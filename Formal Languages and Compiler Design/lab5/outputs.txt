@@ -1,0 +1,16 @@
+ab$: accepted
+Sa->aABC
+Ab->b
+B$->epsilon
+C$->epsilon
+aa$: accepted
+Sa->aABC
+Aa->a
+B$->epsilon
+C$->epsilon
+abab$: accepted
+Sa->aABC
+Ab->b
+Ba->a
+Cb->b
+aaaa$: errorState

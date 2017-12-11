@@ -1,0 +1,3 @@
+rootProject.name = 'sand'
+
+include ':app'

@@ -109,8 +109,8 @@ ID 				[a-z]
 {DIGITS}		{addConst(yytext); return CONSTANT_TOKEN;}
 
 \}					    {addPIF(5,0); return DONE_TOKEN;}
-if					{addPIF(6,0); return IF_TOKEN;}
-repeat				{addPIF(7,0); return DOREPEAT_TOKEN;}
+if					    {addPIF(6,0); return IF_TOKEN;}
+repeat				    {addPIF(7,0); return DOREPEAT_TOKEN;}
 int 					{addPIF(8,0); return TYPE_TOKEN;}
 float 					{addPIF(9,0); return TYPE_TOKEN;}
 read 					{addPIF(10,0); return READ_TOKEN;}

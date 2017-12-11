@@ -4,7 +4,7 @@ class Example3{
 			read(n);
 			sum=0;
 			while(n > 0){
-				read(var);
+				read(var);$$
 				sum=sum+var;
 				n=n-1;	
 			}

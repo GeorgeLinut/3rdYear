@@ -1,0 +1,45 @@
+Curs 9 
+
+System serivces and sensors 
+
+To be able to create a job we are using a builder form a job info class we are spicifing an if and we ae specifieng a service component, we are unsing a test job serive to execue out tasjs m if we are expecting the user to set the value in secodes we have to convertt that in miliseconds to specifry if we need a wi fi connection 
+
+PressureDemo.java 
+
+Curs 7 ListDemo 
+
+CardFlipActivity pentru flip cu detalii 
+AnimateLayoutChanges="true" pentru listview animations 
+
+React saptmana 10 
+
+ParallelSreen.js pentru un welcome fain 
+
+Shape shifter pentur animatii 		
+
+Javascript does not have type --> typescript 
+ES5 there are classes but still no type 
+
+Rest api between frontend and back we need back so we use maven-swagger to generate api
+
+NPM-->Package.json
+
+npm install -g <pachage-name>
+
+Angular has LiveReload
+
+Communication via decorators (bindings are defined in view)
+
+Lyfecycle hook 
+
+@Input() e ca Parameter 
+
+Angular dependency injection ---> constructor(private offerService:OfferService)
+
+Directives in aNGULAR
+Special comands that you use uin the html tpm tell angular that this is a componnt of ngif ng for 
+
+Diverctives are mainly to manipulate objects , alter behaviour 
+
+Structural directives *ngFor *ngIf 
+export-->public
