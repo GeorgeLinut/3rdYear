@@ -1,0 +1,18 @@
+beginProgram p a := 5 end $ accepted
+Program -> beginProgram IDENTIFIER StatementList
+IDENTIFIER -> Letter | Letter Char
+Char -> Digit | Letter
+Letter->p
+StatementList -> Statement
+Statement -> SimpleStatement
+SimpleStatement-> AssignStatement
+AssignStatement -> Variable := Expression
+Variable -> IDENTIFIER
+IDENTIFIER->Letter|Char
+Letter->a
+Expression -> Termen
+Termen -> Factor
+Factor ->Constant
+Constant -> 5
+
+beginProgram p $ = 2 end errorState

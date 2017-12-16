@@ -1,0 +1,2 @@
+beginProgram p a := 5 end $
+beginProgram p $ = 2 end

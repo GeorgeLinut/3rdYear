@@ -30,10 +30,10 @@ class FirstFollow {
                 for (int j = 0; j < productions.length; j++) {
                     String production = productions[j];
                     ArrayList<String> rule = new ArrayList<>();
-                    String[] elements = production.trim().split(" ");
+                    String[] elements = production.trim().split("\\s+");
                     for (int i = 0; i < elements.length; i++) {
                         rule.add(elements[i]);
-                        if (!terminals.contains(elements[i]) && !nonTerminals.contains(elements[i]) && (Character.isLowerCase(elements[i].charAt(0)))) {
+                        if (!terminals.contains(elements[i]) && !nonTerminals.contains(elements[i]) && (!Character.isUpperCase(elements[i].charAt(0)))) {
                             terminals.add(elements[i]);
                         }
                     }
@@ -92,12 +92,13 @@ class FirstFollow {
         Iterator it = niceRules.entrySet().iterator();
         while (it.hasNext()) {
             Map.Entry pair = (Map.Entry) it.next();
-            String[] indexKeys = ((String) pair.getKey()).trim().split(" ");
+            String[] indexKeys = ((String) pair.getKey()).trim().split("\\s+");
             String key = indexKeys[1];
             ArrayList<String> production = (ArrayList<String>) pair.getValue();
             ArrayList<String> columns = new ArrayList<>();
             for (int i = 0; i < production.size(); i++) {
                 HashSet<String> first = firstSet.get(production.get(i));
+
                 for (String string : first) {
                     if (!string.equals("epsilon")) {
                         columns.add(string);
@@ -175,6 +176,7 @@ class FirstFollow {
                         HashSet<String> firstOfFollow = firstOf(followSymbol);
                         if (!firstOfFollow.contains("epsilon")) {
                             result.addAll(firstOfFollow);
+                            break;
                         } else {
                             firstOfFollow.remove("epsilon");
                             result.addAll(firstOfFollow);
@@ -196,7 +198,7 @@ class FirstFollow {
             reader = new BufferedReader(new InputStreamReader(new FileInputStream("inputs.txt")));
             List<String> lines = reader.lines().collect(Collectors.toList());
             for (String line : lines) {
-                String[] input = line.trim().split(" ");
+                String[] input = line.trim().split("\\s+");
                 ArrayList<String> inputList = new ArrayList<>();
                 for (int i = 0; i < input.length; i++) {
                     inputList.add(input[i]);
@@ -249,14 +251,16 @@ class FirstFollow {
                     }
                     outPutTape.add(key + "->" + toPush);
                 } else {
-                    writer.write(originalInput + ": errorState"+"\n");
+                    writer.write(originalInput + ": errorState on"+key+"\n");
 
-                    System.out.println(originalInput + ": errorState");
                     break;
                 }
             }
         }
         writer.close();
+
+
+
     }
 
     public static void main(String[] args) {
@@ -266,7 +270,6 @@ class FirstFollow {
         beautifyRules();
         buildTable();
         checkInputs();
-        System.out.println("blanaaa");
     }
 
 
