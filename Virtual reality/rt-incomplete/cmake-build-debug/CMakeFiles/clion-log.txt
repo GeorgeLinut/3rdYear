@@ -1,2 +1,1 @@
 CMakeLists.txt not found in C:\3\Virtual reality\rt-incomplete
-MinGW not found at: C:\MinGW
