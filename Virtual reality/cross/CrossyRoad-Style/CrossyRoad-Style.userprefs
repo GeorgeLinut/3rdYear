@@ -1,0 +1,16 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj" RefactoringSettings.EnableRefactorings="True">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\my-scripts\swipeDetector.cs">
+    <Files>
+      <File FileName="Assets\my-scripts\CarDriveLeftSideScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\my-scripts\disabledPlayer.cs" Line="236" Column="14" />
+      <File FileName="Assets\my-scripts\swipeDetector.cs" Line="1" Column="1" />
+      <File FileName="Assets\my-scripts\taxiHonk.cs" Line="1" Column="1" />
+      <File FileName="Assets\my-scripts\truckHonk.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
